@@ -1,4 +1,4 @@
-# Python Substrate Polkascan Extension
+# Python Substrate Interface: Polkascan Extension
 
 [![Latest Version](https://img.shields.io/pypi/v/substrate-interface-polkascan.svg)](https://pypi.org/project/substrate-interface-polkascan/)
 [![Supported Python versions](https://img.shields.io/pypi/pyversions/substrate-interface-polkascan.svg)](https://pypi.org/project/substrate-interface/)
@@ -6,7 +6,7 @@
 
 
 ## Description
-This extension enables [Substrate Interface](https://github.com/polkascan/py-substrate-interface) to use indexes provided by [Polkascan Explorer API](https://github.com/polkascan/explorer#explorer-api-component)   
+This extension enables [Substrate Interface](https://github.com/polkascan/py-substrate-interface) to use indexes provided by the [Polkascan Explorer API](https://github.com/polkascan/explorer#explorer-api-component)   
 
 ## Installation
 ```bash
@@ -16,12 +16,12 @@ pip install substrate-interface-polkascan
 ## Initialization
 
 ```python
-from substrateinterface import SubstrateInterface 
-from substrateinterface_polkascan.extensions import PolkascanSearchExtension
+from substrateinterface import SubstrateInterface
+from substrateinterface_polkascan.extensions import PolkascanExtension
 
 substrate = SubstrateInterface(url="ws://127.0.0.1:9944")
 
-substrate.register_extension(PolkascanSearchExtension(url='http://127.0.0.1:8000/graphql/'))
+substrate.register_extension(PolkascanExtension(url='http://127.0.0.1:8000/graphql/'))
 ```
 
 ## Usage

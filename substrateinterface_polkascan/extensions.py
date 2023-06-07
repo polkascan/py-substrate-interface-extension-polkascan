@@ -20,7 +20,7 @@ from gql import gql, Client
 from gql.transport.aiohttp import AIOHTTPTransport
 
 
-class PolkascanSearchExtension(SearchExtension):
+class PolkascanExtension(SearchExtension):
 
     def __init__(self, url: str):
         self.url = url

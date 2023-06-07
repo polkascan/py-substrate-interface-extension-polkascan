@@ -19,7 +19,7 @@ import unittest
 from os import environ
 
 from substrateinterface import SubstrateInterface
-from substrateinterface_polkascan.extensions import PolkascanSearchExtension
+from substrateinterface_polkascan.extensions import PolkascanExtension
 
 POLKADOT_NODE_URL = environ.get('SUBSTRATE_NODE_URL_POLKADOT') or 'ws://127.0.0.1:9944'
 POLKASCAN_API_URL = environ.get('POLKASCAN_API_URL') or 'http://127.0.0.1:8000/graphql/'
@@ -30,7 +30,7 @@ class TestExtension(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.substrate = SubstrateInterface(url=POLKADOT_NODE_URL)
-        cls.substrate.register_extension(PolkascanSearchExtension(url=POLKASCAN_API_URL))
+        cls.substrate.register_extension(PolkascanExtension(url=POLKASCAN_API_URL))
 
     def test_filter_events(self):
 
